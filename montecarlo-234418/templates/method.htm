@@ -1,0 +1,76 @@
+{% extends "_base.htm" %}
+
+{% block title %}
+        Method
+{% endblock %}
+
+{% block pageblock %}
+
+<h1><div id="up">
+      <div class="concept concept-three">
+    <div class="word">
+      <div class="hover">
+        <div></div>
+        <div></div>
+        <h1>M</h1>
+      </div>
+      <div class="hover">
+        <div></div>
+        <div></div>
+        <h1>E</h1>
+      </div>
+      <div class="hover">
+        <div></div>
+        <div></div>
+        <h1>T</h1>
+      </div>
+      <div class="hover">
+        <div></div>
+        <div></div>
+        <h1>H</h1>
+      </div>
+      <div class="hover">
+        <div></div>
+        <div></div>
+        <h1>O</h1>
+      </div>
+      <div class="hover">
+        <div></div>
+        <div></div>
+        <h1>D</h1>
+      </div>
+    </div>
+  </div>
+</div>
+</h1>
+
+<h3><a class="button" href="index.htm">HOME</a></h3>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+
+<video autoplay muted loop id="myVideo">
+  <source src="https://static.videezy.com/system/resources/previews/000/022/292/original/4k-abstract-white-shadow-glass-losange-background.mp4">
+</video>
+        
+
+        <div id="down">
+                <form id="stats" method="post" action="/random">
+                	<form action="/action_page.php">
+						<h4>Enter your service of choice EMR or Lambda (lowercase): <input type="text" name="lambda"></h4>
+                        <h4>Enter number of darts: <input type="text" name="dartshots"></h4>
+                        <h4>Enter decimal accuracy: <input type="text" name="decimal_accuracy"></h4>
+                        <h4>Enter reporting rate: <input type="text" name="reporting_rate"></h4>
+                        <h4>Enter number of resources: <input type="text" name="resources"></h4>
+                        <input type="submit" name="draw" value="Submit"/></h4>
+                </form>
+               	{% if note %}
+                <h3 style="color: #11FFFF">
+                        {{ note }}
+                </h3>
+                {% endif %}
+        </div>
+{% endblock %}
+

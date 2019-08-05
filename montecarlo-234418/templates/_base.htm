@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1", charset="utf-8" http-equiv="Content-Type">
+<link href="../static/def.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<br>
+<br>
+<br>
+<title>
+	{% block title %} replace title {% endblock %}
+</title>
+</head>
+
+<body>
+
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      
+            google.charts.load('current', {'packages':['line']});
+      google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+
+      var data = new google.visualization.DataTable();
+      data.addColumn('number', 'Shots');
+      data.addColumn('number', 'Pi Estimates');
+
+
+      data.addRows([
+        [1000, 3.02],
+        [1050,  3.16]
+      ]);
+
+      var options = {
+        chart: {
+          title: 'MonteCarlo Simulation'
+        },
+        width: 900,
+        height: 500,
+      };
+
+      var chart = new google.charts.Line(document.getElementById('linechart_material'));
+
+      chart.draw(data, google.charts.Line.convertOptions(options));
+    }
+    </script>
+
+<script type="text/javascript">
+
+      var video = document.getElementById("myVideo");
+
+      function myFunction() {
+        if (!video.paused) {
+          video.pause();
+          btn.innerHTML = "Play";
+        }
+      }
+
+    </script>
+
+	<div id="page">
+		{% block pageblock%}
+			replace page
+		{% endblock%}
+	</div>
+  <br>
+  <br>
+  <br>
+  <br>
+	<div id="footer">
+		<p style="position: relative; margin-top: 500px"><a href="https://www.google.com/search?ei=ppasXNX9A8OJ1fAP4r6dyAQ&q=Monte+carlo+method&oq=Monte+carlo+method&gs_l=psy-ab.3..35i39j0i67l3j0l6.12050.15715..18406...2.0..0.80.344.5......0....1..gws-wiz.......0i71j0i7i30j35i304i39j0i13.revbevzaHaA" class="fa fa-google"></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | &copy; | 2019 University of Surrey | BBQCHCKN | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="https://www.youtube.com/watch?v=OgO1gpXSUzU" class="fa fa-youtube"></a>
+	</div>
+  <br>
+  <br>
+  <br>
+  <br>
+
+<div class="container">
+  <div class="chevron"></div>
+  <div class="chevron"></div>
+  <div class="chevron"></div>
+  <span class="text">Scroll down</span>
+</div>
+
+</body>
+
+</html>
+
+

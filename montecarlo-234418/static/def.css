@@ -1,0 +1,297 @@
+html,body {
+	text-align: justify;
+	font: 15px Arial, Helvetica, sans-serif;
+	color: black;
+	width:auto;
+  height: auto;
+  font-color: black;
+		
+}
+
+h1, h1 a, h2, h2 a, h3, {
+	text-decoration: none;
+	font-family: Tahoma, Georgia, "Times New Roman", Times, serif;
+	font-weight: normal;
+	color: black;
+	text-align: center;
+	
+}
+
+h1 {
+	letter-spacing: -1px;
+	font-size: 1.8em;
+	font-family: Courier New, monospace;
+	font-style: normal;
+	font-weight: 100;
+	text-align: center;
+	margin-top: -90px;
+}
+
+h2 {
+	letter-spacing: -1px;
+	font-size: 1.5em;
+	text-align: center;
+	font-family:  Courier New, monospace;
+	font-style: normal;
+	font-weight: 100;
+}
+
+h3 {
+	font-size: 1.2em;
+	text-align: center;
+	font-family:  Courier New, monospace;
+	font-style: normal;
+	font-weight: 100;
+	padding-top: -90px;
+  font-color: black;
+}
+
+h4 {
+	font-size: 1.2em;
+	text-align: center;
+	text-align: center;
+	font-family:  Courier New, monospace;
+	font-style: normal;
+	font-weight: 100;
+}
+
+.concept-three {
+  text-align: center;
+  background-color: : white;
+}
+.concept-three .word {
+  display: flex;
+  align-items: center;
+  max-width: 500px;
+  margin: auto;
+}
+.concept-three .hover {
+  flex: 1;
+  display: grid;
+  height: calc(100vh - 10em);
+  grid: repeat(2, 2fr)/100%;
+  position: relative;
+}
+.concept-three .hover div {
+  position: relative;
+  z-index: 5;
+}
+.concept-three .hover div:nth-child(1):hover ~ h1 {
+  margin-top: -10px;
+}
+.concept-three .hover div:nth-child(2):hover ~ h1 {
+  margin-top: -50px;
+}
+.concept-three h1 {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 50%;
+  margin-top: -30px;
+  transition: 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  z-index: 0;
+}
+
+.button {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    padding: 12px 24px;
+    width: 25%;
+    border: 1px solid #c7c5c7;
+    border-radius: 8px;
+    background: #c7c7c7;
+    background: -webkit-gradient(linear, left top, left bottom, from(#c7c7c7), to(#b8b8b8));
+    background: -moz-linear-gradient(top, #c7c7c7, #b8b8b8);
+    background: linear-gradient(to bottom, #c7c7c7, #b8b8b8);
+    font: normal normal normal 20px courier new;
+    color: #000000;
+    text-decoration: none;
+}
+.button:hover,
+.button:focus {
+    border: 1px solid #e5e3e5;
+    background: #efefef;
+    background: -webkit-gradient(linear, left top, left bottom, from(#efefef), to(#dddddd));
+    background: -moz-linear-gradient(top, #efefef, #dddddd);
+    background: linear-gradient(to bottom, #efefef, #dddddd);
+    color: #000000;
+    text-decoration: none;
+}
+.button:active {
+    background: #777777;
+    background: -webkit-gradient(linear, left top, left bottom, from(#777777), to(#b8b8b8));
+    background: -moz-linear-gradient(top, #777777, #b8b8b8);
+    background: linear-gradient(to bottom, #777777, #b8b8b8);
+}
+
+
+#down {
+	text-align:center;
+	align-content: center;
+}	
+	
+
+IMG.displayed{
+	display: inline;
+	margin-left: 200px;
+}
+
+#page {
+	/*background: white;*/
+	height: 750px;
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	
+}
+
+#up {
+	margin-left: 10px;
+	margin-top: 5px;
+}
+
+#down{
+	margin-left: 10px;
+	height: 30px;
+	padding: 60px;
+	
+}
+#footer p {
+	clear: both;
+	text-align: center;
+	font-size:1em;
+	font-family: Courier New, monospace;
+	font-weight: 100;
+	color: black;
+	height: 20px;
+	height: 2.5rem;  
+	position: absolute;
+	bottom: 0;
+}
+
+#footer a{
+	color: white;
+}
+
+.fa {
+  padding: 20px;
+  font-size: 60px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa-google {
+  background: black;
+  color: white;
+  border-radius: 8px;
+}
+
+.fa-youtube {
+  background: black;
+  color: white;
+  border-radius: 8px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#myVideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  z-index: -100;
+  min-width: 100%; 
+  min-height: 100%;
+}
+
+.container {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  margin-top: -900px;
+  margin-left: 100px;
+}
+
+.chevron {
+  position: relative;
+  width: 28px;
+  height: 8px;
+  opacity: 0;
+  transform: scale3d(0.5, 0.5, 0.5);
+  animation: move 3s ease-out infinite;
+}
+
+.chevron:first-child {
+  animation: move 3s ease-out 1s infinite;
+}
+
+.chevron:nth-child(2) {
+  animation: move 3s ease-out 2s infinite;
+}
+
+.chevron:before,
+.chevron:after {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 51%;
+  background: black;
+}
+
+.chevron:before {
+  left: 0;
+  transform: skew(0deg, 30deg);
+}
+
+.chevron:after {
+  right: 0;
+  width: 50%;
+  transform: skew(0deg, -30deg);
+}
+
+@keyframes move {
+  25% {
+    opacity: 1;
+
+  }
+  33% {
+    opacity: 1;
+    transform: translateY(30px);
+  }
+  67% {
+    opacity: 1;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+  }
+}
+
+.text {
+  display: block;
+  margin-top: 75px;
+  margin-left: -30px;
+  font-family: "Courier new", monospace;
+  font-size: 12px;
+  color: black;
+  text-transform: uppercase;
+  white-space: nowrap;
+  opacity: .25;
+  animation: pulse 2s linear alternate infinite;
+}
+
+@keyframes pulse {
+  to {
+    opacity: 1;
+  }
+}
